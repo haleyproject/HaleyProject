@@ -1,0 +1,49 @@
+$root = "E:\HaleyProject"
+
+$oldOrg = "TheHaleyProject"
+$newOrg = "HaleyProject"
+
+Get-ChildItem -Path $root -Directory | ForEach-Object {
+
+    $repoPath = $_.FullName
+    $gitFolder = Join-Path $repoPath ".git"
+
+    if (-not (Test-Path $gitFolder)) {
+        Write-Host "Skipping non-git folder: $($_.Name)" -ForegroundColor Yellow
+        return
+    }
+
+    Push-Location $repoPath
+
+    try {
+        $originUrl = git remote get-url origin 2>$null
+
+        if (-not $originUrl) {
+            Write-Host "No origin remote found: $($_.Name)" -ForegroundColor Yellow
+            Pop-Location
+            return
+        }
+
+        if ($originUrl -notlike "*$oldOrg*") {
+            Write-Host "No change needed: $($_.Name) -> $originUrl" -ForegroundColor Gray
+            Pop-Location
+            return
+        }
+
+        $newUrl = $originUrl -replace $oldOrg, $newOrg
+
+        Write-Host "Updating: $($_.Name)" -ForegroundColor Cyan
+        Write-Host "  Old: $originUrl"
+        Write-Host "  New: $newUrl"
+
+        git remote set-url origin $newUrl
+
+        Write-Host "  Done" -ForegroundColor Green
+    }
+    catch {
+        Write-Host "Error in $($_.Name): $_" -ForegroundColor Red
+    }
+    finally {
+        Pop-Location
+    }
+}
