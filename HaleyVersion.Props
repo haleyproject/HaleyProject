@@ -34,5 +34,18 @@
 <HaleyWPFVersion>5.5.5</HaleyWPFVersion>
 <ProjectBaseUrl>https://github.com/haleyproject/Haley</ProjectBaseUrl>
 
+<HaleyProject Condition="'$(HaleyProject)' == ''">$(MSBuildThisFileDirectory)..</HaleyProject>
+<HaleyAbstractions Condition="'$(HaleyAbstractions)' == ''">$(HaleyProject)\HaleyAbstractions\HaleyAbstractions</HaleyAbstractions>
+<HaleyAbstractionsCore Condition="'$(HaleyAbstractionsCore)' == ''">$(HaleyProject)\HaleyAbstractions.Core\HaleyAbstractionsCore</HaleyAbstractionsCore>
+<HaleyHelpers Condition="'$(HaleyHelpers)' == ''">$(HaleyProject)\HaleyHelpers\HaleyHelpers</HaleyHelpers>
+<HaleyLog Condition="'$(HaleyLog)' == ''">$(HaleyProject)\HaleyLog\HaleyLog</HaleyLog>
+<HaleyEvents Condition="'$(HaleyEvents)' == ''">$(HaleyProject)\HaleyEvents\HaleyEvents</HaleyEvents>
+<HaleyExtensions Condition="'$(HaleyExtensions)' == ''">$(HaleyProject)\HaleyExtensions\HaleyExtensions</HaleyExtensions>
+<HaleyHelpersDB Condition="'$(HaleyHelpersDB)' == ''">$(HaleyProject)\HaleyHelpers.DB\HaleyHelpersDB</HaleyHelpersDB>
+<HaleyRest Condition="'$(HaleyRest)' == ''">$(HaleyProject)\HaleyRest\HaleyRest</HaleyRest>
+<HaleyHelpersWeb Condition="'$(HaleyHelpersWeb)' == ''">$(HaleyProject)\HaleyHelpers.Web\HaleyHelpersWeb</HaleyHelpersWeb>
+<HaleyFlowEngine Condition="'$(HaleyFlowEngine)' == ''">$(HaleyProject)\HaleyFlow.Engine\HaleyFlowEngine</HaleyFlowEngine>
+<HaleyFlowConsumer Condition="'$(HaleyFlowConsumer)' == ''">$(HaleyProject)\HaleyFlow.Consumer\HaleyFlowConsumer</HaleyFlowConsumer>
+
 </PropertyGroup>
 </Project>
