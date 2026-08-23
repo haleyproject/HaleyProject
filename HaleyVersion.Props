@@ -9,7 +9,7 @@
 <RepositoryType>GIT</RepositoryType>
   
 <HaleyAbstractionsVersion>1.3.12</HaleyAbstractionsVersion>
-<HaleyAbstractionsCoreVersion>0.0.19</HaleyAbstractionsCoreVersion>
+<HaleyAbstractionsCoreVersion>0.0.20</HaleyAbstractionsCoreVersion>
 <HaleyExtensionsVersion>2.4.13</HaleyExtensionsVersion>
 
 <HaleyEventsVersion>2.2.41</HaleyEventsVersion>
