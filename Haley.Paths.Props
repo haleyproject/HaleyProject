@@ -1,0 +1,44 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <HaleyProject Condition="'$(HaleyProject)' == ''">$(MSBuildThisFileDirectory)..</HaleyProject>
+
+    <HaleyAbstractionsProj Condition="'$(HaleyAbstractionsProj)' == ''">$(HaleyProject)\HaleyAbstractions\HaleyAbstractions\HaleyAbstractions.csproj</HaleyAbstractionsProj>
+    <HaleyAbstractionsCoreProj Condition="'$(HaleyAbstractionsCoreProj)' == ''">$(HaleyProject)\HaleyAbstractions.Core\HaleyAbstractionsCore\HaleyAbstractionsCore.csproj</HaleyAbstractionsCoreProj>
+    <HaleyEventsProj Condition="'$(HaleyEventsProj)' == ''">$(HaleyProject)\HaleyEvents\HaleyEvents\HaleyEvents.csproj</HaleyEventsProj>
+    <HaleyExtensionsProj Condition="'$(HaleyExtensionsProj)' == ''">$(HaleyProject)\HaleyExtensions\HaleyExtensions\HaleyExtensions.csproj</HaleyExtensionsProj>
+    <HaleyHelpersProj Condition="'$(HaleyHelpersProj)' == ''">$(HaleyProject)\HaleyHelpers\HaleyHelpers\HaleyHelpers.csproj</HaleyHelpersProj>
+    <HaleyHelpersDBProj Condition="'$(HaleyHelpersDBProj)' == ''">$(HaleyProject)\HaleyHelpers.DB\HaleyHelpersDB\HaleyHelpersDB.csproj</HaleyHelpersDBProj>
+    <HaleyHelpersWebProj Condition="'$(HaleyHelpersWebProj)' == ''">$(HaleyProject)\HaleyHelpers.Web\HaleyHelpersWeb\HaleyHelpersWeb.csproj</HaleyHelpersWebProj>
+    <HaleyLogProj Condition="'$(HaleyLogProj)' == ''">$(HaleyProject)\HaleyLog\HaleyLog\HaleyLog.csproj</HaleyLogProj>
+    <HaleyRestProj Condition="'$(HaleyRestProj)' == ''">$(HaleyProject)\HaleyRest\HaleyRest\HaleyRest.csproj</HaleyRestProj>
+    <HaleyStorageProj Condition="'$(HaleyStorageProj)' == ''">$(HaleyProject)\HaleyStorage\HaleyStorage\HaleyStorage.csproj</HaleyStorageProj>
+    <HaleyIOCProj Condition="'$(HaleyIOCProj)' == ''">$(HaleyProject)\HaleyIOC\HaleyIOC\HaleyIOC.csproj</HaleyIOCProj>
+    <HaleyFlowEngineProj Condition="'$(HaleyFlowEngineProj)' == ''">$(HaleyProject)\HaleyFlow.Engine\HaleyFlowEngine\HaleyFlowEngine.csproj</HaleyFlowEngineProj>
+    <HaleyFlowConsumerProj Condition="'$(HaleyFlowConsumerProj)' == ''">$(HaleyProject)\HaleyFlow.Consumer\HaleyFlowConsumer\HaleyFlowConsumer.csproj</HaleyFlowConsumerProj>
+    <HaleyRuleEngineProj Condition="'$(HaleyRuleEngineProj)' == ''">$(HaleyProject)\HaleyRuleEngine\HaleyRuleEngine\HaleyRuleEngine.csproj</HaleyRuleEngineProj>
+    <HaleyMVVMProj Condition="'$(HaleyMVVMProj)' == ''">$(HaleyProject)\HaleyMVVM\HaleyMVVM\HaleyMVVM.csproj</HaleyMVVMProj>
+    <HaleyWPFProj Condition="'$(HaleyWPFProj)' == ''">$(HaleyProject)\HaleyWPF\HaleyWPF\HaleyWPF.csproj</HaleyWPFProj>
+    <HaleyWPFIconsPackProj Condition="'$(HaleyWPFIconsPackProj)' == ''">$(HaleyProject)\HaleyWPFIconsPack\HaleyWPFIconsPack\HaleyWPFIconsPack.csproj</HaleyWPFIconsPackProj>
+    <HaleyWPFFontsProj Condition="'$(HaleyWPFFontsProj)' == ''">$(HaleyProject)\HaleyWPFFonts\HaleyWPFFonts\HaleyWPFFonts.csproj</HaleyWPFFontsProj>
+
+    <!-- Temporary aliases keep existing Haley test and sample projects compatible. -->
+    <HaleyAbstractions Condition="'$(HaleyAbstractions)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyAbstractionsProj)'))</HaleyAbstractions>
+    <HaleyAbstractionsCore Condition="'$(HaleyAbstractionsCore)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyAbstractionsCoreProj)'))</HaleyAbstractionsCore>
+    <HaleyEvents Condition="'$(HaleyEvents)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyEventsProj)'))</HaleyEvents>
+    <HaleyExtensions Condition="'$(HaleyExtensions)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyExtensionsProj)'))</HaleyExtensions>
+    <HaleyHelpers Condition="'$(HaleyHelpers)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyHelpersProj)'))</HaleyHelpers>
+    <HaleyHelpersDB Condition="'$(HaleyHelpersDB)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyHelpersDBProj)'))</HaleyHelpersDB>
+    <HaleyHelpersWeb Condition="'$(HaleyHelpersWeb)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyHelpersWebProj)'))</HaleyHelpersWeb>
+    <HaleyLog Condition="'$(HaleyLog)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyLogProj)'))</HaleyLog>
+    <HaleyRest Condition="'$(HaleyRest)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyRestProj)'))</HaleyRest>
+    <HaleyStorage Condition="'$(HaleyStorage)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyStorageProj)'))</HaleyStorage>
+    <HaleyIOC Condition="'$(HaleyIOC)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyIOCProj)'))</HaleyIOC>
+    <HaleyFlowEngine Condition="'$(HaleyFlowEngine)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyFlowEngineProj)'))</HaleyFlowEngine>
+    <HaleyFlowConsumer Condition="'$(HaleyFlowConsumer)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyFlowConsumerProj)'))</HaleyFlowConsumer>
+    <HaleyRuleEngine Condition="'$(HaleyRuleEngine)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyRuleEngineProj)'))</HaleyRuleEngine>
+    <HaleyMVVM Condition="'$(HaleyMVVM)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyMVVMProj)'))</HaleyMVVM>
+    <HaleyWPF Condition="'$(HaleyWPF)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyWPFProj)'))</HaleyWPF>
+    <HaleyWPFIconsPack Condition="'$(HaleyWPFIconsPack)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyWPFIconsPackProj)'))</HaleyWPFIconsPack>
+    <HaleyWPFFonts Condition="'$(HaleyWPFFonts)' == ''">$([System.IO.Path]::GetDirectoryName('$(HaleyWPFFontsProj)'))</HaleyWPFFonts>
+  </PropertyGroup>
+</Project>

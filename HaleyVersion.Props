@@ -1,51 +1,6 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-<PropertyGroup>
-  
-<LangVersion>12.0</LangVersion>
-<Nullable>enable</Nullable>
-<Authors>The Haley Project</Authors>
-<Company>TheHaleyProject</Company>
-<Copyright>Haley</Copyright>
-<RepositoryType>GIT</RepositoryType>
-  
-<HaleyAbstractionsVersion>1.3.12</HaleyAbstractionsVersion>
-<HaleyAbstractionsCoreVersion>0.0.20</HaleyAbstractionsCoreVersion>
-<HaleyExtensionsVersion>2.4.13</HaleyExtensionsVersion>
-
-<HaleyEventsVersion>2.2.41</HaleyEventsVersion>
-<HaleyHelpersVersion>2.4.12</HaleyHelpersVersion>
-<HaleyHelpersDBVersion>0.1.13</HaleyHelpersDBVersion>
-<HaleyHelpersWebVersion>0.2.9</HaleyHelpersWebVersion>
-<HaleyLogVersion>2.0.67</HaleyLogVersion>
-<HaleyRestVersion>3.0.27</HaleyRestVersion>
-  
-<HaleyStorageVersion>0.1.10</HaleyStorageVersion>
-<HaleyIOCVersion>3.0.37</HaleyIOCVersion>
-<HaleyFlowEngineVersion>0.0.25</HaleyFlowEngineVersion>
-<HaleyFlowConsumerVersion>0.0.14</HaleyFlowConsumerVersion>
-	
-<HaleyFlowAgentVersion>0.0.1</HaleyFlowAgentVersion>
-<HaleyFlowBaseVersion>0.0.1</HaleyFlowBaseVersion>
-<HaleyFlowHubVersion>0.0.1</HaleyFlowHubVersion>
-
-<HaleyRuleEngineVersion>1.2.2</HaleyRuleEngineVersion>
-
-<HaleyMVVMVersion>6.5.5</HaleyMVVMVersion>
-<HaleyWPFVersion>5.5.5</HaleyWPFVersion>
-<ProjectBaseUrl>https://github.com/haleyproject/Haley</ProjectBaseUrl>
-
-<HaleyProject Condition="'$(HaleyProject)' == ''">$(MSBuildThisFileDirectory)..</HaleyProject>
-<HaleyAbstractions Condition="'$(HaleyAbstractions)' == ''">$(HaleyProject)\HaleyAbstractions\HaleyAbstractions</HaleyAbstractions>
-<HaleyAbstractionsCore Condition="'$(HaleyAbstractionsCore)' == ''">$(HaleyProject)\HaleyAbstractions.Core\HaleyAbstractionsCore</HaleyAbstractionsCore>
-<HaleyHelpers Condition="'$(HaleyHelpers)' == ''">$(HaleyProject)\HaleyHelpers\HaleyHelpers</HaleyHelpers>
-<HaleyLog Condition="'$(HaleyLog)' == ''">$(HaleyProject)\HaleyLog\HaleyLog</HaleyLog>
-<HaleyEvents Condition="'$(HaleyEvents)' == ''">$(HaleyProject)\HaleyEvents\HaleyEvents</HaleyEvents>
-<HaleyExtensions Condition="'$(HaleyExtensions)' == ''">$(HaleyProject)\HaleyExtensions\HaleyExtensions</HaleyExtensions>
-<HaleyHelpersDB Condition="'$(HaleyHelpersDB)' == ''">$(HaleyProject)\HaleyHelpers.DB\HaleyHelpersDB</HaleyHelpersDB>
-<HaleyRest Condition="'$(HaleyRest)' == ''">$(HaleyProject)\HaleyRest\HaleyRest</HaleyRest>
-<HaleyHelpersWeb Condition="'$(HaleyHelpersWeb)' == ''">$(HaleyProject)\HaleyHelpers.Web\HaleyHelpersWeb</HaleyHelpersWeb>
-<HaleyFlowEngine Condition="'$(HaleyFlowEngine)' == ''">$(HaleyProject)\HaleyFlow.Engine\HaleyFlowEngine</HaleyFlowEngine>
-<HaleyFlowConsumer Condition="'$(HaleyFlowConsumer)' == ''">$(HaleyProject)\HaleyFlow.Consumer\HaleyFlowConsumer</HaleyFlowConsumer>
-
-</PropertyGroup>
+  <!-- Compatibility entry point for existing Haley projects. -->
+  <Import Project="$(MSBuildThisFileDirectory)Haley.Source.Props" />
+  <Import Project="$(MSBuildThisFileDirectory)Haley.Version.Props" />
+  <Import Project="$(MSBuildThisFileDirectory)Haley.Paths.Props" />
 </Project>

@@ -1,0 +1,23 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <HaleyAbstractionsVersion>1.3.13</HaleyAbstractionsVersion>
+    <HaleyAbstractionsCoreVersion>0.0.21</HaleyAbstractionsCoreVersion>
+    <HaleyExtensionsVersion>2.4.14</HaleyExtensionsVersion>
+    <HaleyEventsVersion>2.2.42</HaleyEventsVersion>
+    <HaleyHelpersVersion>2.4.13</HaleyHelpersVersion>
+    <HaleyHelpersDBVersion>0.1.14</HaleyHelpersDBVersion>
+    <HaleyHelpersWebVersion>0.2.10</HaleyHelpersWebVersion>
+    <HaleyLogVersion>2.0.68</HaleyLogVersion>
+    <HaleyRestVersion>3.0.28</HaleyRestVersion>
+    <HaleyStorageVersion>0.1.11</HaleyStorageVersion>
+    <HaleyIOCVersion>3.0.38</HaleyIOCVersion>
+    <HaleyFlowEngineVersion>0.0.26</HaleyFlowEngineVersion>
+    <HaleyFlowConsumerVersion>0.0.15</HaleyFlowConsumerVersion>
+    <HaleyFlowAgentVersion>0.0.1</HaleyFlowAgentVersion>
+    <HaleyFlowBaseVersion>0.0.1</HaleyFlowBaseVersion>
+    <HaleyFlowHubVersion>0.0.1</HaleyFlowHubVersion>
+    <HaleyRuleEngineVersion>1.2.2</HaleyRuleEngineVersion>
+    <HaleyMVVMVersion>6.5.5</HaleyMVVMVersion>
+    <HaleyWPFVersion>5.5.5</HaleyWPFVersion>
+  </PropertyGroup>
+</Project>
