@@ -341,3 +341,6 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 /_CORE_PROJECTS/HaleyExtensions/Extensions/StringHelpers.cs
+
+# Local verification build outputs
+.buildverify/
